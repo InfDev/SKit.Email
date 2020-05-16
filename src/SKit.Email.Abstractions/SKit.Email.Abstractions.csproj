@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Alexander Shlyakhto</Authors>
+    <Product>SKit.Email</Product>
+    <PackageProjectUrl>https://github.com/InfDev/SKit.Email</PackageProjectUrl>
+    <RepositoryUrl>http://82.193.113.247:8081/v3/index.json</RepositoryUrl>
+    <PackageTags>email, smtp, netstandard, netcore, csharp, C#</PackageTags>
+    <Description>SMTP service abstraction</Description>
+    <Copyright>Copyright © Alexander Shlyakhto</Copyright>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>

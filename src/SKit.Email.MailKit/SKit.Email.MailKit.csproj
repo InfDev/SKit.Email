@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Alexander Shlyakhto</Authors>
+    <Product>SKit.Email</Product>
+    <PackageProjectUrl>https://github.com/InfDev/SKit.Email</PackageProjectUrl>
+    <RepositoryUrl>http://82.193.113.247:8081/v3/index.json</RepositoryUrl>
+    <PackageTags>email, smtp, netstandard, netcore, csharp, C#</PackageTags>
+    <Description>SMTP service</Description>
+    <Copyright>Copyright © Alexander Shlyakhto</Copyright>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.6.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.4" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\SKit.Email.Abstractions\SKit.Email.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
