@@ -74,9 +74,7 @@ namespace SKit.Email.MailKit
 
             var mimeMessage = new MimeMessage
             {
-                Sender = (message.From == null
-                    ? new MailboxAddress(_options.DefaultSender)
-                    : new MailboxAddress(message.From))
+                Sender = message.From == null ? MailboxAddress.Parse(_options.DefaultSender) : MailboxAddress.Parse(message.From)
             };
 
             mimeMessage.From.Add(mimeMessage.Sender);
@@ -85,7 +83,7 @@ namespace SKit.Email.MailKit
             {
                 foreach (var address in message.To.Split(EmailsSeparator, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    mimeMessage.To.Add(new MailboxAddress(address));
+                    mimeMessage.To.Add(MailboxAddress.Parse(address));
                 }
             }
 
@@ -93,7 +91,7 @@ namespace SKit.Email.MailKit
             {
                 foreach (var address in message.Cc.Split(EmailsSeparator, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    mimeMessage.Cc.Add(new MailboxAddress(address));
+                    mimeMessage.Cc.Add(MailboxAddress.Parse(address));
                 }
             }
 
@@ -101,7 +99,7 @@ namespace SKit.Email.MailKit
             {
                 foreach (var address in message.Bcc.Split(EmailsSeparator, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    mimeMessage.Bcc.Add(new MailboxAddress(address));
+                    mimeMessage.Bcc.Add(MailboxAddress.Parse(address));
                 }
             }
 
@@ -109,7 +107,7 @@ namespace SKit.Email.MailKit
             {
                 foreach (var address in message.ReplyTo.Split(EmailsSeparator, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    mimeMessage.ReplyTo.Add(new MailboxAddress(address));
+                    mimeMessage.ReplyTo.Add(MailboxAddress.Parse(address));
                 }
             }
 
