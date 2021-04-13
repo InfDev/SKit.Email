@@ -12,7 +12,7 @@ node_modules/
 BenchmarkDotNet.Artifacts/
 .gradle/
 src/SignalR/clients/**/dist/
-modules/
+# modules/
 .ionide/
 
 # File extensions
